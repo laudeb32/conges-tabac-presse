@@ -3,24 +3,24 @@ const route = useRoute();
 
 const items = [
   {
-    label: "Avantages",
-    to: "#avantages",
-    icon: "heroicons:bolt-20-solid",
-  },
-  {
     label: "Témoignages",
     to: "#temoignages",
-    icon: "heroicons:chat-bubble-left-right-20-solid",
+    icon: "heroicons:chat-bubble-left-right-solid",
+  },
+  {
+    label: "Avantages",
+    to: "#avantages",
+    icon: "heroicons:sparkles-solid",
   },
   {
     label: "Formules",
     to: "#formules",
-    icon: "heroicons:information-circle-20-solid",
+    icon: "heroicons:puzzle-piece-solid",
   },
   {
     label: "Me contacter",
     to: "#contact",
-    icon: "heroicons:envelope-20-solid",
+    icon: "heroicons:envelope-solid",
   },
 ];
 </script>
