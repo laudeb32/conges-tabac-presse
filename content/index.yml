@@ -1,0 +1,101 @@
+hero:
+  title: Désormais, faites confiance à Congés Tabac Presse pour vos remplacements
+  description: |
+    Vous gérez un Bar-Tabac-Presse et vous désirez vous reposer quelques jours ? Vos dernières vacances ne sont-elles qu'un lointain souvenir ? Peut-être tout "simplement" qu'un de vos employés est malade, ou que vous devez vous absenter... [Dans tous les cas, j'ai la solution pour vous.]{.block}
+intro:
+  headline: Introduction
+  title: Partout en France, des remplaçants pour votre Bar-Tabac-Presse
+  description: Je m'appelle Laurent Debriat, et en avril 2018, après avoir cessé mon activité, j'ai décidé de créer Congés Tabac Presse avec pour intention de répondre à une problématique récurrente pour les gérants comme pour les anciens buralistes, à savoir trouver, respectivement, des remplaçants ou des missions à effectuer. J'ai alors bâti un réseau qui compte, à ce jour, plus de 110 entreprises et 160 remplaçants.
+  features:
+    - title: Efficacité
+      description: Ensemble, nous avons déjà organisé plus de 4000 journées de remplacement.
+      icon: heroicons:rocket-launch-solid
+    - title: Expérience
+      description: |
+        La continuité de votre activité est confiée à d'anciens buralistes. Pour eux, un seul objectif : assurer la gestion de votre commerce en votre absence dans le but, entre autres, de maintenir votre chiffre d'affaires.
+      icon: heroicons:academic-cap-solid
+    - title: Flexibilité et simplicité
+      description: Pour plus de sérénité, vous pouvez aussi choisir d'héberger les remplaçants chez vous et ainsi profiter de leur présence afin de surveiller votre domicile.
+      icon: heroicons:home-modern-solid
+testimonials:
+  title: Collaborons ensemble !
+  description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos qui est voluptas nisi ullam iure.
+  items:
+    - quote: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis neque ducimus itaque esse quidem reiciendis accusantium, adipisci qui ipsum porro totam repellendus hic quas assumenda, sed fuga quo modi libero incidunt ea illum. Sit, repellendus.
+      user:
+        name: John D.
+        description: Remplaçant depuis 2021
+    - quote: Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo consectetur, maiores tenetur inventore enim quisquam dolorum saepe omnis quibusdam aliquam deleniti voluptas eaque, quo iusto.
+      user:
+        name: Georges Dupont
+        description: Buraliste partenaire depuis 2020
+        avatar:
+          src: https://i.pravatar.cc/150?img=3
+          alt: Georges Dupont
+    - quote: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, neque facilis cum tempore possimus vel adipisci magni voluptate quia suscipit doloremque reprehenderit earum blanditiis quas iusto nisi, voluptatibus praesentium doloribus eos nam rerum accusantium officia, eveniet nobis! A, recusandae porro!
+      user:
+        name: Jeanne D.
+        description: Remplaçante depuis 2024
+    - quote: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente voluptate iusto odit reprehenderit laudantium natus unde atque veniam beatae sunt nesciunt neque, nobis cumque amet omnis totam dolore. Dolores, modi!
+      user:
+        name: Théo D.
+        description: Buraliste partenaire depuis 2023
+    - quote: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente voluptate iusto odit reprehenderit laudantium natus unde atque veniam beatae sunt nesciunt neque, nobis cumque amet omnis totam dolore. Dolores, modi!
+      user:
+        name: Jacques Pépin
+        description: Buraliste partenaire depuis 2022
+        avatar:
+          src: https://i.pravatar.cc/150?img=8
+          alt: Jacques Pépin
+why:
+  title: Pourquoi choisir Congés Tabac Presse ?
+  features:
+    - title: Prix
+      description: |
+        Mes tarifs sont compétitifs, sans frais cachés, et sont indiqués de manière claire et détaillée dans la section suivante.
+      icon: heroicons:currency-euro-solid
+    - title: Réactivité
+      description: |
+        Joignable à tout moment durant mes heures d'ouverture, je mets tout en œuvre pour traiter votre demande et vous proposer une solution adaptée à vos besoins en moins de 48 heures.
+      icon: heroicons:clock-solid
+    - title: Professionnalisme
+      description: |
+        Réceptions, invendus, commandes de tabac, tenue du bar, PMU, dépôts bancaires, etc. Vos futurs remplaçants savent tout faire et s'adaptent aux spécificités de votre affaire. Présents sur place la veille de votre départ, sans aucun coût supplémentaire, vous n'avez qu'à les briefer et ils s'occupent de tout !
+      icon: heroicons:briefcase-solid
+    - title: Disponibilité
+      description: |
+        Où que vous soyez en France métropolitaine, des remplaçants qualifiés et compétents sont prêts à intervenir seuls ou en duo.
+      icon: heroicons:map-pin-solid
+pricing:
+  one:
+    price: 100 €
+    fee:
+      default: 360
+      annual: 200
+  two:
+    price: 200 €
+    discount: 190 €
+    fee:
+      default: 550
+      annual: 300
+  fee:
+    label: Forfait annuel
+    description: |
+      Ce forfait permet l'utilisation des services de remplacement sans aucun frais de gestion supplémentaire pendant une durée de 12 mois. Il est rentabilisé dès lors que vous souhaitez effectuer plus de deux demandes par an.
+form:
+  quick:
+    title: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, reiciendis.
+    icon: heroicons:bell-alert-solid
+faq:
+  title: Questions fréquentes
+  description: |
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
+  items:
+    - label: Comment ça marche ?
+      content: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
+    - label: Combien ça coûte ?
+      content: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
+    - label: Est-ce que je peux me débarrasser de mes remplaçants ?
+      content: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
+    - label: Pourquoi c'est si cher ?
+      content: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.

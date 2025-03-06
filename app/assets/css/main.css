@@ -1,0 +1,17 @@
+@import "tailwindcss" theme(static);
+@import "@nuxt/ui-pro";
+
+@source "../../../content";
+
+html {
+  scroll-padding-top: calc(var(--ui-header-height) + calc(var(--spacing) * 6));
+}
+
+::selection {
+  color: white;
+  background-color: var(--ui-color-primary-500);
+}
+
+[tabindex="-1"]:focus {
+  outline: none;
+}
