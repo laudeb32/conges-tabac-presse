@@ -3,5 +3,12 @@ export default defineNuxtConfig({
   css: ["~/assets/css/main.css"],
   devtools: { enabled: true },
   future: { compatibilityVersion: 4 },
-  modules: ["@nuxt/ui-pro", "@nuxt/content"],
+  modules: ["@nuxt/ui-pro", "@nuxt/content", "nuxt-nodemailer"],
+  nodemailer: {
+    from: "",
+    host: "",
+    port: "",
+    secure: "",
+    auth: { user: "", pass: "" },
+  },
 });

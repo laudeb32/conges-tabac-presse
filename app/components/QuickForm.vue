@@ -1,15 +1,14 @@
 <script setup lang="ts">
 import * as v from "valibot";
 
+const { partnership } = defineProps<{ partnership: Partnership }>();
+
 const schema = v.object({
-  partnership: v.pipe(
-    v.string(),
-    v.values(["one-sub", "two-subs", "become-sub"])
-  ),
-  firstName: v.pipe(v.string(), v.nonEmpty("Votre prénom est obligatoire")),
-  lastName: v.pipe(v.string(), v.nonEmpty("Votre nom est obligatoire")),
-  phoneNumber: v.optional(v.string()),
-  email: v.pipe(
+  partnership: v.pipe(v.string(), v.values(PARTNERSHIPS)),
+  Prénom: v.pipe(v.string(), v.nonEmpty("Votre prénom est obligatoire")),
+  Nom: v.pipe(v.string(), v.nonEmpty("Votre nom est obligatoire")),
+  Téléphone: v.optional(v.string()),
+  Email: v.pipe(
     v.string(),
     v.nonEmpty("Votre email est obligatoire"),
     v.email("L'email est invalide")
@@ -18,26 +17,27 @@ const schema = v.object({
 
 const state = reactive({
   partnership: "",
-  firstName: "",
-  lastName: "",
-  phoneNumber: "",
-  email: "",
+  Prénom: "",
+  Nom: "",
+  Téléphone: "",
+  Email: "",
 });
 </script>
 
 <template>
   <UForm :schema="v.safeParser(schema)" :state>
-    <UFormField name="firstName" label="Prénom" required>
-      <UInput v-model="state.firstName" />
+    <UInput name="partnership" :value="partnership" hidden />
+    <UFormField name="Prénom" label="Prénom" required>
+      <UInput v-model="state.Prénom" />
     </UFormField>
-    <UFormField name="lastName" label="Nom" required>
-      <UInput v-model="state.lastName" />
+    <UFormField name="Nom" label="Nom" required>
+      <UInput v-model="state.Nom" />
     </UFormField>
-    <UFormField name="phoneNumber" label="Numéro de téléphone" hint="Facultatif">
-      <UInput v-model="state.phoneNumber" type="tel" />
+    <UFormField name="Téléphone" label="Numéro de téléphone" hint="Facultatif">
+      <UInput v-model="state.Téléphone" type="tel" />
     </UFormField>
-    <UFormField name="email" label="Email" required>
-      <UInput v-model="state.email" type="email" />
+    <UFormField name="Email" label="Email" required>
+      <UInput v-model="state.Email" type="email" />
     </UFormField>
     <UButton type="submit" label="Envoyer" />
   </UForm>

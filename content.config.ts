@@ -6,6 +6,14 @@ export default defineContentConfig({
       source: "index.yml",
       type: "data",
       schema: z.object({
+        banner: z.object({
+          title: z.string().nonempty(),
+          action: z.object({
+            label: z.string().nonempty(),
+            to: z.string().nonempty(),
+            trailingIcon: z.string(),
+          }),
+        }),
         hero: z.object({
           title: z.string().nonempty(),
           description: z.string().nonempty(),
@@ -28,8 +36,9 @@ export default defineContentConfig({
             user: z.object({
               name: z.string().nonempty(),
               description: z.string().nonempty(),
-              avatar: z.object({
-                src: z.string().nonempty(),
+              avatar: z
+                .object({
+                  src: z.string().nonempty(),
                   alt: z.string().nonempty(),
                 })
                 .optional(),

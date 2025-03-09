@@ -1,3 +1,8 @@
+banner:
+  title: Psst, vous souhaitez devenir remplaçant ?
+  action:
+    label: Par ici !
+    trailingIcon: heroicons:cursor-arrow-rays-solid
 hero:
   title: Désormais, faites confiance à Congés Tabac Presse pour vos remplacements
   description: |
@@ -9,14 +14,14 @@ intro:
   features:
     - title: Efficacité
       description: Ensemble, nous avons déjà organisé plus de 4000 journées de remplacement.
-      icon: i-heroicons-rocket-launch-solid
+      icon: heroicons:rocket-launch-solid
     - title: Expérience
       description: |
         La continuité de votre activité est confiée à d'anciens buralistes. Pour eux, un seul objectif : assurer la gestion de votre commerce en votre absence dans le but, entre autres, de maintenir votre chiffre d'affaires.
-      icon: i-heroicons-academic-cap-solid
+      icon: heroicons:academic-cap-solid
     - title: Flexibilité et simplicité
       description: Pour plus de sérénité, vous pouvez aussi choisir d'héberger les remplaçants chez vous et ainsi profiter de leur présence afin de surveiller votre domicile.
-      icon: i-heroicons-home-modern-solid
+      icon: heroicons:home-modern-solid
 testimonials:
   - quote: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis neque ducimus itaque esse quidem reiciendis accusantium, adipisci qui ipsum porro totam repellendus hic quas assumenda, sed fuga quo modi libero incidunt ea illum. Sit, repellendus.
     user:
@@ -57,16 +62,16 @@ why:
     - title: Prix
       description: |
         Mes tarifs sont compétitifs, sans frais cachés, et sont indiqués de manière claire et détaillée dans la section suivante.
-      icon: i-heroicons-currency-euro-solid
+      icon: heroicons:currency-euro-solid
     - title: Efficacité
       description: |
         Joignable à tout moment durant mes heures d'ouverture, je mets tout en œuvre pour traiter votre demande et vous proposer une solution adaptée à vos besoins en moins de 48 heures.
-      icon: i-heroicons-clock-solid
+      icon: heroicons:clock-solid
     - title: Professionnalisme
       description: |
         Réceptions, invendus, commandes de tabac, tenue du bar, PMU, dépôts bancaires, etc. Vos futurs remplaçants savent tout faire et s'adaptent aux spécificités de votre affaire. Présents sur place la veille de votre départ, sans aucun coût supplémentaire, vous n'avez qu'à les briefer et ils s'occupent de tout !
-      icon: i-heroicons-briefcase-solid
+      icon: heroicons:briefcase-solid
     - title: Disponibilité
       description: |
         Où que vous soyez en France métropolitaine, des remplaçants qualifiés et compétents sont prêts à intervenir seuls ou en duo.
-      icon: i-heroicons-map-pin-solid
+      icon: heroicons:map-pin-solid

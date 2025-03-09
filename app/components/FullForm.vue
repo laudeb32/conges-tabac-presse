@@ -151,5 +151,4 @@ const state = reactive({
     </UFormField>
     <UButton type="submit" label="Envoyer" />
   </UForm>
-  <pre>{{ state }}</pre>
 </template>

@@ -3,14 +3,13 @@
 
 @source "../../../content";
 
-@media (prefers-reduced-motion: no-preference) {
-  html:focus-within {
-    scroll-behavior: smooth;
-  }
+html {
+  scroll-padding-top: calc(var(--ui-header-height) + calc(var(--spacing) * 6));
 }
 
-html {
-  scroll-padding-top: calc(var(--ui-header-height) + calc(var(--spacing) * 8));
+::selection {
+  color: white;
+  background-color: var(--ui-color-primary-500);
 }
 
 [tabindex="-1"]:focus {
