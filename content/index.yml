@@ -68,16 +68,15 @@ why:
       icon: heroicons:map-pin-solid
 pricing:
   one:
-    price: 100 €
+    price: 110 €
     fee:
-      default: 360
-      annual: 200
+      default: 200
+      annual: 360
   two:
-    price: 200 €
-    discount: 190 €
+    price: 220 €
     fee:
-      default: 550
-      annual: 300
+      default: 300
+      annual: 550
   fee:
     label: Forfait annuel
     description: |

@@ -5,7 +5,7 @@
   "engines": {
     "node": "22.14.0"
   },
-  "packageManager": "pnpm@10.6.1",
+  "packageManager": "pnpm@10.7.0",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -14,17 +14,12 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxt/content": "^3.3.0",
+    "@nuxt/content": "^3.4.0",
     "@nuxt/ui-pro": "3.0.2",
     "@nuxthub/core": "0.8.22",
-    "nuxt": "^3.16.0",
+    "nuxt": "^3.16.1",
     "vue": "latest",
     "vue-router": "latest"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "better-sqlite3"
-    ]
   },
   "devDependencies": {
     "wrangler": "^4.6.0"

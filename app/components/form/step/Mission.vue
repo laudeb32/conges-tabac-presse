@@ -11,21 +11,37 @@ defineProps<{ state: any }>();
     >
       <UCalendar v-model="state['Période de réservation']" range />
     </UFormField>
-    <UFormField label="Horaire de début" name="Horaire de début" required>
-      <UInput v-model="state['Horaire de début']" type="time" />
+    <UFormField label="Jours travaillés" name="Jours travaillés" required>
+      <UInputMenu
+        v-model="state['Jours travaillés']"
+        multiple
+        :items="[...DAYS]"
+      />
     </UFormField>
-    <UFormField label="Horaire de fin" name="Horaire de fin" required>
-      <UInput v-model="state['Horaire de fin']" type="time" />
+    <UFormField
+      label="Nombre d'heures par semaine"
+      name="Nombre d'heures par semaine"
+      required
+    >
+      <UInputNumber v-model="state['Nombre d\'heures par semaine']" :min="0" />
     </UFormField>
     <UFormField
       label="Autres employés présents"
       name="Autres employés présents"
       required
     >
-      <UInput v-model="state['Autres employés présents']" type="number" />
+      <UInputNumber v-model="state['Autres employés présents']" :min="0" />
     </UFormField>
-    <UFormField label="Hébergement sur place" name="Hébergement sur place">
-      <UCheckbox v-model="state['Hébergement sur place']" />
+    <pre>{{ state["Hébergement sur place"] }}</pre>
+    <UFormField
+      label="Hébergement sur place"
+      name="Hébergement sur place"
+      required
+    >
+      <UInputMenu
+        v-model="state['Hébergement sur place']"
+        :items="[...ACCOMODATIONS]"
+      />
     </UFormField>
     <UFormField label="Autres informations" name="Autres informations">
       <UTextarea v-model="state['Autres informations']" />

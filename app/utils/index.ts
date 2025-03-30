@@ -1,3 +1,11 @@
+export const ACCOMODATIONS = [
+  "À domicile",
+  "Airbnb",
+  "Autre",
+  "Gîte",
+  "Hôtel",
+] as const;
+
 export const DAYS = [
   "Lundi",
   "Mardi",
@@ -10,7 +18,7 @@ export const DAYS = [
 
 export const FEATURES = [
   "Bar",
-  "Loto",
+  "FDJ",
   "Nickel",
   "PMU",
   "Presse",
@@ -23,6 +31,6 @@ export const PARTNERSHIPS = [
   "Un remplaçant",
   "Un binôme de remplaçants",
   "Devenir remplaçant",
-] as const
+] as const;
 
 export type Partnership = (typeof PARTNERSHIPS)[number];

@@ -22,23 +22,20 @@ const state = reactive<
 >({
   Prénom: "",
   Nom: "",
+  Téléphone: "",
   Email: "",
   "Nom de l'établissement": "",
-  "Jours d'ouverture": [],
-  "Horaire d'ouverture": "",
-  "Horaire de fermeture": "",
-  "Caractéristiques de l'établissement": [],
   "Code postal": "",
   Ville: "",
   Adresse: "",
-  "Numéro de SIRET": "",
+  "Caractéristiques de l'établissement": [],
   "Nombre de clients par jour": 0,
   // FIXME: Update schema
-  "Période de réservation": {},
-  "Horaire de début": "",
-  "Horaire de fin": "",
+  "Période de remplacement": {},
+  "Jours travaillés": [],
+  "Nombre d'heures par semaine": 0,
   "Autres employés présents": 0,
-  "Hébergement sur place": false,
+  "Hébergement sur place": undefined,
   "Autres informations": "",
 });
 
@@ -54,6 +51,8 @@ function nextStep() {
 }
 
 function submit(event: SubmitEvent) {
+  console.log("ok");
+
   console.log(event);
 }
 </script>

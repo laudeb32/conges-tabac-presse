@@ -10,7 +10,7 @@ defineProps<{ state: any }>();
     <UFormField label="Nom" name="Nom" required>
       <UInput v-model="state.Nom" />
     </UFormField>
-    <UFormField label="Numéro de téléphone" name="Téléphone" hint="Facultatif">
+    <UFormField label="Numéro de téléphone" name="Téléphone" required>
       <UInput
         v-model="state.Téléphone"
         type="tel"

@@ -5,15 +5,6 @@ const { data } = await useAsyncData(() => queryCollection("content").first());
 
 const annualFee = ref(false);
 const partnership = ref<Partnership>();
-
-const tabs = [
-  {
-    label: "Complet",
-    icon: "heroicons:clipboard-document-list-solid",
-    slot: "full",
-  },
-  { label: "Rapide", icon: "heroicons:bolt-solid", slot: "quick" },
-];
 </script>
 
 <template>
@@ -128,18 +119,7 @@ const tabs = [
         </UFormField>
         <template v-if="partnership">
           <FormQuick v-if="partnership === 'Devenir remplaçant'" />
-          <UTabs v-else variant="link" :items="tabs">
-            <template #full>
-              <FormFull />
-            </template>
-            <template #quick>
-              <UAlert
-                :title="data.form.quick.title"
-                :icon="data.form.quick.icon"
-              />
-              <FormQuick />
-            </template>
-          </UTabs>
+          <FormFull v-else />
         </template>
       </UPageSection>
       <UPageSection :title="data.faq.title" :description="data.faq.description">
