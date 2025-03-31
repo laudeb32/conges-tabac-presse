@@ -1,55 +1,72 @@
-import * as z from "zod";
+import * as v from "valibot";
 
-export const infosSchema = z.object({
-  Prénom: z.string().nonempty("Votre prénom est obligatoire"),
-  Nom: z.string().nonempty("Votre nom est obligatoire"),
-  Téléphone: z.string().optional(),
-  Email: z
-    .string()
-    .email("L'email est invalide")
-    .nonempty("Votre email est obligatoire"),
+export const infosSchema = v.object({
+  Prénom: v.pipe(v.string(), v.nonEmpty("Votre prénom est requis")),
+  Nom: v.pipe(v.string(), v.nonEmpty("Votre nom est requis")),
+  Téléphone: v.pipe(
+    v.string(),
+    v.nonEmpty("Votre numéro de téléphone est requis")
+  ),
+  Email: v.pipe(v.string(), v.email("L'email est invalide")),
 });
 
-export type InfosSchema = z.infer<typeof infosSchema>;
+export type InfosSchema = v.InferOutput<typeof infosSchema>;
 
-export const establishmentSchema = z.object({
-  "Nom de l'établissement": z
-    .string()
-    .nonempty("Le nom de l'établissement est obligatoire"),
-  "Code postal": z.string().nonempty("Le code postal est obligatoire"),
-  Ville: z.string().nonempty("La ville est obligatoire"),
-  Adresse: z.string().nonempty("L'adresse est obligatoire"),
-  "Caractéristiques de l'établissement": z.array(z.enum(FEATURES)),
-  "Numéro de SIRET": z
-    .string()
-    .min(14, "Le numéro de SIRET doit contenir 14 chiffres")
-    .max(14, "Le numéro de SIRET doit contenir 14 chiffres")
-    .optional(),
-  "Nombre de clients par jour": z
-    .number()
-    .nonnegative("Le nombre de clients moyen par jour doit être supérieur à 0"),
+export const establishmentSchema = v.object({
+  "Nom de l'établissement": v.pipe(
+    v.string(),
+    v.nonEmpty("Le nom de l'établissement est requis")
+  ),
+  "Code postal": v.pipe(v.string(), v.nonEmpty("Le code postal est requis")),
+  Ville: v.pipe(v.string(), v.nonEmpty("La ville est requise")),
+  Adresse: v.pipe(v.string(), v.nonEmpty("L'adresse est requise")),
+  "Caractéristiques de l'établissement": v.pipe(
+    v.array(v.union(FEATURES.map((feature) => v.literal(feature)))),
+    v.minLength(1, "Veuillez sélectionner au moins une caractéristique")
+  ),
+  "Numéro de SIRET": v.optional(
+    v.pipe(
+      v.string(),
+      v.minLength(14, "Le numéro de SIRET doit contenir 14 chiffres"),
+      v.maxLength(14, "Le numéro de SIRET doit contenir 14 chiffres")
+    )
+  ),
+  "Nombre de clients par jour": v.pipe(
+    v.number(),
+    v.minValue(50, "Le nombre de clients par jour doit être supérieur à 0")
+  ),
 });
 
-export type EstablishmentSchema = z.infer<typeof establishmentSchema>;
+export type EstablishmentSchema = v.InferOutput<typeof establishmentSchema>;
 
-export const missionSchema = z.object({
-  "Période de remplacement": z
-    .object({
-      start: z.object({ year: z.number(), month: z.number(), day: z.number() }),
-      end: z.object({ year: z.number(), month: z.number(), day: z.number() }),
-    })
-    .required(),
-  "Jours travaillés": z
-    .array(z.enum(DAYS))
-    .min(1, "Au moins un jour est requis"),
-  "Nombre d'heures par semaine": z
-    .number()
-    .positive("Le nombre d'heures par semaine doit être supérieur à 0"),
-  "Autres employés présents": z.number(),
-  "Hébergement sur place": z.enum(ACCOMODATIONS, {
-    required_error: "Veuillez sélectionner un type d'hébergement",
-  }),
-  "Autres informations": z.string().optional(),
+const dateObject = v.looseObject({
+  year: v.number(),
+  month: v.number(),
+  day: v.number(),
 });
 
-export type MissionSchema = z.infer<typeof missionSchema>;
+export const missionSchema = v.object({
+  "Période de remplacement": v.object(
+    { start: dateObject, end: dateObject },
+    "Vous devez sélectionner une période de remplacement"
+  ),
+  "Jours travaillés": v.pipe(
+    v.array(v.union(DAYS.map((day) => v.literal(day)))),
+    v.minLength(1, "Au moins un jour est requis")
+  ),
+  "Nombre d'heures par semaine": v.pipe(
+    v.number(),
+    v.minValue(1, "Le nombre d'heures par semaine doit être supérieur à 0")
+  ),
+  "Autres employés présents": v.number(),
+  "Hébergement sur place": v.pipe(
+    v.union(
+      ACCOMODATIONS.map((accomodation) => v.literal(accomodation)),
+      "Veuillez sélectionner un type d'hébergement valide"
+    ),
+    v.nonEmpty("Veuillez sélectionner un type d'hébergement")
+  ),
+  "Autres informations": v.optional(v.string()),
+});
+
+export type MissionSchema = v.InferOutput<typeof missionSchema>;

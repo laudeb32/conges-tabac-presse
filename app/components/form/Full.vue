@@ -30,8 +30,7 @@ const state = reactive<
   Adresse: "",
   "Caractéristiques de l'établissement": [],
   "Nombre de clients par jour": 0,
-  // FIXME: Update schema
-  "Période de remplacement": {},
+  "Période de remplacement": undefined,
   "Jours travaillés": [],
   "Nombre d'heures par semaine": 0,
   "Autres employés présents": 0,
@@ -51,8 +50,6 @@ function nextStep() {
 }
 
 function submit(event: SubmitEvent) {
-  console.log("ok");
-
   console.log(event);
 }
 </script>

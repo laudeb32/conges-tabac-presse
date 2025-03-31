@@ -5,11 +5,11 @@ defineProps<{ state: any }>();
 <template>
   <UForm :schema="missionSchema" :state>
     <UFormField
-      label="Période de réservation"
-      name="Période de réservation"
+      label="Période de remplacement"
+      name="Période de remplacement"
       required
     >
-      <UCalendar v-model="state['Période de réservation']" range />
+      <UCalendar v-model="state['Période de remplacement']" range />
     </UFormField>
     <UFormField label="Jours travaillés" name="Jours travaillés" required>
       <UInputMenu
@@ -32,7 +32,6 @@ defineProps<{ state: any }>();
     >
       <UInputNumber v-model="state['Autres employés présents']" :min="0" />
     </UFormField>
-    <pre>{{ state["Hébergement sur place"] }}</pre>
     <UFormField
       label="Hébergement sur place"
       name="Hébergement sur place"
