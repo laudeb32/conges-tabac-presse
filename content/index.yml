@@ -3,15 +3,15 @@ hero:
   description: Imprévu, souci de personnel ou besoin d'une pause ? [Faites confiance à nos services pour garantir la continuité de votre commerce.]{.block}
 intro:
   headline: Nos forces
-  title: Un réseau de plus de 110 entreprises et 160 remplaçants qualifiés
+  title: Un réseau de plus de 150 entreprises et 250 remplaçants qualifiés
   description: |
-    Depuis plus de 10 ans, notre mission reste la même : permettre aux gérants de bar-tabac-presse de s'absenter en toute confiance. Notre réseau, qui ne cesse de grandir, rassemble aujourd'hui plus de 110 entreprises satisfaites et environ 160 remplaçants. Leur expertise garantit une parfaite maîtrise de votre métier, de ses spécificités et de ses exigences. De la gestion quotidienne aux pics d'activité, votre commerce est entre les mains d'experts qui parlent le même langage que vous.
+    Depuis plus de 10 ans, notre mission reste la même : permettre aux gérants de bar-tabac-presse de prendre du repos en toute sérénité. Notre réseau, qui ne cesse de grandir, s'est construit autour d'une équipe de remplaçants qualifiés.
   features:
     - title: Efficacité
-      description: Hier à Lille, aujourd'hui à Bordeaux, demain chez vous. Grâce à nos compétences, chaque jour, et ce partout en France, des gérants de bar-tabac-presse comme vous peuvent bénéficier d'un repos mérité.
+      description: Hier à Lille, aujourd'hui à Bordeaux, demain chez vous. Grâce à nos compétences, chaque jour, et ce partout en France, des gérants comme vous peuvent s'offrir des moments de détente bien mérités.
       icon: heroicons:rocket-launch-solid
     - title: Expertise
-      description: Derrière votre comptoir, le relai sera assuré par un ancien professionnel qui connaît votre quotidien sur le bout des doigts. Du premier client jusqu'à la fermeture, votre commerce garde son rythme habituel.
+      description: Derrière votre comptoir, le relai sera assuré par un professionnel chevronné qui connaît votre quotidien sur le bout des doigts. Du premier client jusqu'à la fermeture, votre commerce conserve son rythme habituel, même en période d'affluence.
       icon: heroicons:academic-cap-solid
     - title: Flexibilité
       description: Vous gérez l'hébergement, on s'occupe du reste. Pour la fin de semaine ou dans trois mois, en urgence ou pour vos futures vacances, nous faisons tout notre possible pour trouver la solution qu'il vous faut. L'option hébergement à domicile vous garantit une sérénité absolue.
@@ -45,7 +45,8 @@ why:
         Une gestion administrative simplifiée au maximum, un contrat clair et une facturation simple : nous vous accompagnons tout au long du processus.
       icon: heroicons:document-check-solid
     - title: Une approche moderne
-      description: Des outils performants, un suivi constant des disponibilités de chacun, une organisation optimisée... Notre méthode de travail assure un traitement efficace de chaque demande.
+      description: |
+        Une prise en charge optimisée et des outils performants qui nous permettent de suivre les disponibilités de chacun : notre méthode de travail assure un traitement efficace de chaque demande, de la prise de contact à la clôture du remplacement.
       icon: heroicons:square-3-stack-3d-solid
 pricing:
   one:

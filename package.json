@@ -8,6 +8,7 @@
   "packageManager": "pnpm@10.7.0",
   "scripts": {
     "build": "nuxt build",
+    "deploy": "npx nuxthub deploy",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",

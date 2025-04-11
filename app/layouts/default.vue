@@ -21,7 +21,7 @@ function navigationItems(type: "header" | "footer" = "header") {
           {
             label: "Me contacter",
             to: "#",
-            icon: "heroicons:envelope-solid",
+            icon: "heroicons:chat-bubble-oval-left-ellipsis-solid",
           },
         ]
       : []),
@@ -56,10 +56,14 @@ function navigationItems(type: "header" | "footer" = "header") {
             />
             <address class="flex flex-col">
               <p>Laurent Debriat</p>
-              <NuxtLink to="mailto:contact@conges-tabac-presse.fr">
-                contact@conges-tabac-presse.fr
+              <NuxtLink to="mailto:contact@congestabacpresse.fr">
+                <UIcon name="heroicons:envelope-solid" class="size-4" />
+                contact@congestabacpresse.fr
               </NuxtLink>
-              <NuxtLink to="tel:+33600000000">+33 6 00 00 00 00</NuxtLink>
+              <NuxtLink to="tel:+33687918016">
+                <UIcon name="heroicons:phone-solid" class="size-4" />
+                06 87 91 80 16
+              </NuxtLink>
             </address>
             <div>
               <NuxtLink
