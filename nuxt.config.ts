@@ -6,5 +6,4 @@ export default defineNuxtConfig({
   imports: { dirs: ["schemas"] },
   modules: ["@nuxt/ui-pro", "@nuxt/content", "@nuxthub/core"],
   content: { preview: { api: "https://api.nuxt.studio" } },
-  nitro: { experimental: { openAPI: true } },
 });

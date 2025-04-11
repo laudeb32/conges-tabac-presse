@@ -3,7 +3,7 @@ defineProps<{ state: any }>();
 </script>
 
 <template>
-  <UForm :schema="infosSchema" :state>
+  <UForm :schema="infoSchema" :state>
     <UFormField label="Prénom" name="Prénom" required>
       <UInput v-model="state.Prénom" />
     </UFormField>

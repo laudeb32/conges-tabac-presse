@@ -1,6 +1,6 @@
 import * as v from "valibot";
 
-export const infosSchema = v.object({
+export const infoSchema = v.object({
   Prénom: v.pipe(v.string(), v.nonEmpty("Votre prénom est requis")),
   Nom: v.pipe(v.string(), v.nonEmpty("Votre nom est requis")),
   Téléphone: v.pipe(
@@ -10,7 +10,7 @@ export const infosSchema = v.object({
   Email: v.pipe(v.string(), v.email("L'email est invalide")),
 });
 
-export type InfosSchema = v.InferOutput<typeof infosSchema>;
+export type InfoForm = v.InferOutput<typeof infoSchema>;
 
 export const establishmentSchema = v.object({
   "Nom de l'établissement": v.pipe(
@@ -37,7 +37,7 @@ export const establishmentSchema = v.object({
   ),
 });
 
-export type EstablishmentSchema = v.InferOutput<typeof establishmentSchema>;
+export type EstablishmentForm = v.InferOutput<typeof establishmentSchema>;
 
 const dateObject = v.looseObject({
   year: v.number(),
@@ -69,4 +69,12 @@ export const missionSchema = v.object({
   "Autres informations": v.optional(v.string()),
 });
 
-export type MissionSchema = v.InferOutput<typeof missionSchema>;
+export type MissionForm = v.InferOutput<typeof missionSchema>;
+
+export const formSchema = v.object({
+  ...infoSchema.entries,
+  ...establishmentSchema.entries,
+  ...missionSchema.entries,
+});
+
+export type Form = v.InferOutput<typeof formSchema>;

@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import * as v from "valibot";
+
 const steps = ref([
   {
     slot: "infos",
@@ -17,9 +19,7 @@ const steps = ref([
   },
 ]);
 
-const state = reactive<
-  Partial<InfosSchema & EstablishmentSchema & MissionSchema>
->({
+const state = reactive<Partial<Form>>({
   Prénom: "",
   Nom: "",
   Téléphone: "",
@@ -56,7 +56,7 @@ function submit(event: SubmitEvent) {
 
 <template>
   <UForm :state @submit="(e) => (isLastStep ? submit(e) : nextStep())">
-    <UStepper v-model="currentStep" :items="steps">
+    <UStepper v-model="currentStep" :items="steps" disabled>
       <template #infos>
         <FormStepInfos :state />
       </template>

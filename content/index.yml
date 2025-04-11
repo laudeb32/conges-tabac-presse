@@ -1,71 +1,52 @@
 hero:
-  title: Désormais, faites confiance à Congés Tabac Presse pour vos remplacements
-  description: |
-    Vous gérez un Bar-Tabac-Presse et vous désirez vous reposer quelques jours ? Vos dernières vacances ne sont-elles qu'un lointain souvenir ? Peut-être tout "simplement" qu'un de vos employés est malade, ou que vous devez vous absenter... [Dans tous les cas, j'ai la solution pour vous.]{.block}
+  title: Partez l'esprit tranquille, [on s'occupe de tout]{.block}
+  description: Imprévu, souci de personnel ou besoin d'une pause ? [Faites confiance à nos services pour garantir la continuité de votre commerce.]{.block}
 intro:
-  headline: Introduction
-  title: Partout en France, des remplaçants pour votre Bar-Tabac-Presse
-  description: Je m'appelle Laurent Debriat, et en avril 2018, après avoir cessé mon activité, j'ai décidé de créer Congés Tabac Presse avec pour intention de répondre à une problématique récurrente pour les gérants comme pour les anciens buralistes, à savoir trouver, respectivement, des remplaçants ou des missions à effectuer. J'ai alors bâti un réseau qui compte, à ce jour, plus de 110 entreprises et 160 remplaçants.
+  headline: Nos forces
+  title: Un réseau de plus de 110 entreprises et 160 remplaçants qualifiés
+  description: |
+    Depuis plus de 10 ans, notre mission reste la même : permettre aux gérants de bar-tabac-presse de s'absenter en toute confiance. Notre réseau, qui ne cesse de grandir, rassemble aujourd'hui plus de 110 entreprises satisfaites et environ 160 remplaçants. Leur expertise garantit une parfaite maîtrise de votre métier, de ses spécificités et de ses exigences. De la gestion quotidienne aux pics d'activité, votre commerce est entre les mains d'experts qui parlent le même langage que vous.
   features:
     - title: Efficacité
-      description: Ensemble, nous avons déjà organisé plus de 4000 journées de remplacement.
+      description: Hier à Lille, aujourd'hui à Bordeaux, demain chez vous. Grâce à nos compétences, chaque jour, et ce partout en France, des gérants de bar-tabac-presse comme vous peuvent bénéficier d'un repos mérité.
       icon: heroicons:rocket-launch-solid
-    - title: Expérience
-      description: |
-        La continuité de votre activité est confiée à d'anciens buralistes. Pour eux, un seul objectif : assurer la gestion de votre commerce en votre absence dans le but, entre autres, de maintenir votre chiffre d'affaires.
+    - title: Expertise
+      description: Derrière votre comptoir, le relai sera assuré par un ancien professionnel qui connaît votre quotidien sur le bout des doigts. Du premier client jusqu'à la fermeture, votre commerce garde son rythme habituel.
       icon: heroicons:academic-cap-solid
-    - title: Flexibilité et simplicité
-      description: Pour plus de sérénité, vous pouvez aussi choisir d'héberger les remplaçants chez vous et ainsi profiter de leur présence afin de surveiller votre domicile.
+    - title: Flexibilité
+      description: Vous gérez l'hébergement, on s'occupe du reste. Pour la fin de semaine ou dans trois mois, en urgence ou pour vos futures vacances, nous faisons tout notre possible pour trouver la solution qu'il vous faut. L'option hébergement à domicile vous garantit une sérénité absolue.
       icon: heroicons:home-modern-solid
 testimonials:
   title: Collaborons ensemble !
-  description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos qui est voluptas nisi ullam iure.
+  description: Découvrez pourquoi ces professionnels nous font confiance. Leur satisfaction est notre plus grande fierté, leur témoignage notre meilleure vitrine.
   items:
-    - quote: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis neque ducimus itaque esse quidem reiciendis accusantium, adipisci qui ipsum porro totam repellendus hic quas assumenda, sed fuga quo modi libero incidunt ea illum. Sit, repellendus.
+    - quote: J'ai toujours pu bénéficier d'une réactivité exceptionnelle, comme ce jour ou, suite à un abandon de poste, un remplaçant est arrivé dans la soirée ! C'est cette confiance qui fait que nous travaillons ensemble depuis plus de dix ans.
       user:
-        name: John D.
-        description: Remplaçant depuis 2021
-    - quote: Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo consectetur, maiores tenetur inventore enim quisquam dolorum saepe omnis quibusdam aliquam deleniti voluptas eaque, quo iusto.
+        name: Marie L.
+        description: Buraliste dans l'Ain, partenaire depuis 2014
+    - quote: La qualité des remplaçants avec lesquels j'ai été mis en relation a été au rendez-vous. Ils furent non seulement très professionnels mais également ouverts et sympathiques. Je les recommande chaudement !
       user:
-        name: Georges Dupont
-        description: Buraliste partenaire depuis 2020
-        avatar:
-          src: https://i.pravatar.cc/150?img=3
-          alt: Georges Dupont
-    - quote: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, neque facilis cum tempore possimus vel adipisci magni voluptate quia suscipit doloremque reprehenderit earum blanditiis quas iusto nisi, voluptatibus praesentium doloribus eos nam rerum accusantium officia, eveniet nobis! A, recusandae porro!
-      user:
-        name: Jeanne D.
-        description: Remplaçante depuis 2024
-    - quote: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente voluptate iusto odit reprehenderit laudantium natus unde atque veniam beatae sunt nesciunt neque, nobis cumque amet omnis totam dolore. Dolores, modi!
-      user:
-        name: Théo D.
-        description: Buraliste partenaire depuis 2023
-    - quote: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente voluptate iusto odit reprehenderit laudantium natus unde atque veniam beatae sunt nesciunt neque, nobis cumque amet omnis totam dolore. Dolores, modi!
-      user:
-        name: Jacques Pépin
-        description: Buraliste partenaire depuis 2022
-        avatar:
-          src: https://i.pravatar.cc/150?img=8
-          alt: Jacques Pépin
+        name: Anthony G.
+        description: Buraliste dans le Bas-Rhin, partenaire depuis 2024
 why:
   title: Pourquoi choisir Congés Tabac Presse ?
   features:
-    - title: Prix
-      description: |
-        Mes tarifs sont compétitifs, sans frais cachés, et sont indiqués de manière claire et détaillée dans la section suivante.
+    - title: Tarification claire
+      description: Nos tarifs sont compétitifs, sans frais cachés, et sont indiqués dans la section suivante sans engagement de votre part.
       icon: heroicons:currency-euro-solid
-    - title: Réactivité
-      description: |
-        Joignable à tout moment durant mes heures d'ouverture, je mets tout en œuvre pour traiter votre demande et vous proposer une solution adaptée à vos besoins en moins de 48 heures.
+    - title: Réactivité garantie
+      description: Nous mettons tout en œuvre pour accéder à votre demande et vous proposer une solution sous 48 heures.
       icon: heroicons:clock-solid
-    - title: Professionnalisme
-      description: |
-        Réceptions, invendus, commandes de tabac, tenue du bar, PMU, dépôts bancaires, etc. Vos futurs remplaçants savent tout faire et s'adaptent aux spécificités de votre affaire. Présents sur place la veille de votre départ, sans aucun coût supplémentaire, vous n'avez qu'à les briefer et ils s'occupent de tout !
+    - title: Suivi personnalisé
+      description: Un interlocuteur unique qui suit votre dossier de A à Z, disponible pour répondre à vos questions et s'adapter à vos besoins.
       icon: heroicons:briefcase-solid
-    - title: Disponibilité
+    - title: Démarches facilitées
       description: |
-        Où que vous soyez en France métropolitaine, des remplaçants qualifiés et compétents sont prêts à intervenir seuls ou en duo.
-      icon: heroicons:map-pin-solid
+        Une gestion administrative simplifiée au maximum, un contrat clair et une facturation simple : nous vous accompagnons tout au long du processus.
+      icon: heroicons:document-check-solid
+    - title: Une approche moderne
+      description: Des outils performants, un suivi constant des disponibilités de chacun, une organisation optimisée... Notre méthode de travail assure un traitement efficace de chaque demande.
+      icon: heroicons:square-3-stack-3d-solid
 pricing:
   one:
     price: 110 €
@@ -87,14 +68,15 @@ form:
     icon: heroicons:bell-alert-solid
 faq:
   title: Questions fréquentes
-  description: |
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
+  description: Trouvez ici les réponses aux questions que vous vous posez sur nos services.
   items:
-    - label: Comment ça marche ?
-      content: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-    - label: Combien ça coûte ?
-      content: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-    - label: Est-ce que je peux me débarrasser de mes remplaçants ?
-      content: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-    - label: Pourquoi c'est si cher ?
-      content: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
+    - label: Comment se déroule mon remplacement ?
+      content: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Voluptates, quae. Quisquam, quos. Voluptates, quae.
+    - label: Comment vos remplaçants sont-ils sélectionnés ?
+      content: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Voluptates, quae. Quisquam, quos. Voluptates, quae.
+    - label: Que se passe-t-il si un remplaçant ne convient pas ?
+      content: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Voluptates, quae. Quisquam, quos. Voluptates, quae.
+    - label: Quelles sont les démarches que je dois effectuer pour l'hébergement ?
+      content: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Voluptates, quae. Quisquam, quos. Voluptates, quae.
+    - label: Quels sont mes recours en cas de problème pendant le remplacement ?
+      content: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Voluptates, quae. Quisquam, quos. Voluptates, quae.

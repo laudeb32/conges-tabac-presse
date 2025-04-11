@@ -13,12 +13,19 @@ const partnership = ref<Partnership>();
       <UPageHero
         :title="data.hero.title"
         :links="[
-          { label: 'Formules', to: '#formules', variant: 'soft' },
-          { label: 'Devenir partenaire', to: '#devenir-partenaire' },
+          { label: 'Nos formules', to: '#formules', variant: 'soft' },
+          { label: 'Rejoignez notre réseau', to: '#devenir-partenaire' },
         ]"
       >
+        <template #title>
+          <MDC :value="data.hero.title" :tag="false" unwrap="p" />
+        </template>
         <template #description>
-          <MDC :value="data.hero.description" />
+          <MDC
+            :value="data.hero.description"
+            tag="p"
+            unwrap="p"
+          />
         </template>
       </UPageHero>
       <UPageSection

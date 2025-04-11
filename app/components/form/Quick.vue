@@ -1,5 +1,10 @@
 <script setup lang="ts">
-const state = reactive<InfosSchema>({ Prénom: "", Nom: "", Email: "" });
+const state = reactive<InfoForm>({
+  Prénom: "",
+  Nom: "",
+  Téléphone: "",
+  Email: "",
+});
 </script>
 
 <template>
