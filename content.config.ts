@@ -80,7 +80,7 @@ export default defineContentConfig({
         }),
         faq: z.object({
           title: z.string().nonempty(),
-          description: z.string().optional(),
+          description: z.string().nonempty(),
           items: z.array(
             z.object({
               label: z.string().nonempty(),
