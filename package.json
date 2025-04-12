@@ -22,6 +22,7 @@
     "@nuxthub/core": "0.8.22",
     "@unhead/vue": "^2.0.5",
     "nuxt": "^3.16.1",
+    "nuxt-viewport": "2.3.0",
     "valibot": "^1.0.0",
     "vue": "latest",
     "vue-router": "latest"

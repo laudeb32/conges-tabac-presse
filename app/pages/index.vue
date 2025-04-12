@@ -25,8 +25,8 @@ const { data } = await useAsyncData(() => queryCollection("content").first());
       <UPageColumns id="temoignages" tabindex="-1">
         <UPageCard
           variant="solid"
-          to="#devenir-partenaire"
-          icon="heroicons:user-plus-solid"
+          to="#demande"
+          icon="heroicons:hand-thumb-up-solid"
           :title="data.testimonials.title"
           :description="data.testimonials.description"
           :ui="{ leadingIcon: 'size-10' }"
@@ -53,7 +53,7 @@ const { data } = await useAsyncData(() => queryCollection("content").first());
         :features="data.why.features"
       />
       <LazyPricing hydrate-on-idle v-bind="data.pricing" />
-      <LazyPartnership hydrate-on-visible />
+      <LazyRequest hydrate-on-visible />
       <LazyFaq hydrate-on-interaction v-bind="data.faq" />
     </NuxtLayout>
   </template>

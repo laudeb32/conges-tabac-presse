@@ -3,7 +3,7 @@ const steps = ref([
   {
     slot: "infos",
     title: "Informations personnelles",
-    icon: "i-heroicons-user",
+    icon: "i-heroicons-clipboard-document-list",
   },
   {
     slot: "establishment",
@@ -13,7 +13,7 @@ const steps = ref([
   {
     slot: "mission",
     title: "Détails de la mission",
-    icon: "i-heroicons-calendar",
+    icon: "i-heroicons-calendar-days",
   },
 ]);
 
@@ -54,7 +54,12 @@ function submit(event: SubmitEvent) {
 
 <template>
   <UForm :state @submit="(e) => (isLastStep ? submit(e) : nextStep())">
-    <UStepper v-model="currentStep" :items="steps" disabled>
+    <UStepper
+      v-model="currentStep"
+      :items="steps"
+      disabled
+      :ui="{ title: 'max-xs:hidden' }"
+    >
       <template #infos>
         <FormStepInfos :state />
       </template>

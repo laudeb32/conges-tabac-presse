@@ -13,13 +13,11 @@ const navigation = [
     icon: "heroicons:sparkles-solid",
   },
   {
-    label: "Nos formules",
-    to: "#formules",
-    icon: "heroicons:puzzle-piece-solid",
+    label: "Nos tarifs",
+    to: "#tarifs",
+    icon: "heroicons:currency-euro-solid",
   },
 ];
-
-const { isAvailable } = useAvailability();
 </script>
 
 <template>
@@ -32,7 +30,7 @@ const { isAvailable } = useAvailability();
         right: 'lg:gap-x-6',
       }"
     >
-      <UNavigationMenu :items="navigation" />
+      <UNavigationMenu :items="navigation" variant="link" />
       <template #body>
         <UNavigationMenu
           :items="navigation"
@@ -41,47 +39,16 @@ const { isAvailable } = useAvailability();
           :ui="{ list: 'flex flex-col items-center', link: 'px-0' }"
         />
         <div class="flex justify-center items-center gap-x-2">
-          <UButton to="#devenir-partenaire" label="Devenir partenaire" />
-          <LazyUTooltip
-            :text="
-              isAvailable
-                ? 'Disponible maintenant pour échanger !'
-                : 'Actuellement indisponible. Votre message sera traité dès que possible.'
-            "
-            :delay-duration="0"
-          >
-            <UChip :color="isAvailable ? 'success' : 'warning'">
-              <UButton
-                icon="heroicons:chat-bubble-oval-left-ellipsis-solid"
-                variant="soft"
-              />
-            </UChip>
-          </LazyUTooltip>
+          <UButton to="#demande" label="Devenir partenaire" />
+          <ChatButton />
         </div>
       </template>
       <template #right>
         <div class="flex items-center gap-x-2">
-          <UButton
-            to="#devenir-partenaire"
-            label="Devenir partenaire"
-            class="max-lg:hidden"
-          />
-          <LazyUTooltip
-            :text="
-              isAvailable
-                ? 'Disponible maintenant pour échanger !'
-                : 'Actuellement indisponible. Votre message sera traité dès que possible.'
-            "
-            :delay-duration="0"
-            class="max-lg:hidden"
-          >
-            <UChip :color="isAvailable ? 'success' : 'warning'">
-              <UButton
-                icon="heroicons:chat-bubble-oval-left-ellipsis-solid"
-                variant="soft"
-              />
-            </UChip>
-          </LazyUTooltip>
+          <template v-if="$viewport.isGreaterOrEquals('desktop')">
+            <UButton to="#demande" label="Devenir partenaire" />
+            <ChatButton />
+          </template>
         </div>
         <UColorModeButton />
       </template>
@@ -98,6 +65,7 @@ const { isAvailable } = useAvailability();
               :items="navigation"
               orientation="vertical"
               variant="link"
+              :ui="{ link: 'px-0' }"
             />
             <address class="flex flex-col">
               <p>Laurent Debriat</p>
@@ -132,7 +100,6 @@ const { isAvailable } = useAvailability();
       </template>
       <template #right>
         <UButton
-          to="/mentions-legales"
           label="Mentions légales"
           icon="i-mdi-legal"
           variant="link"

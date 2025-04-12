@@ -3,6 +3,10 @@
 
 @source "../../../content";
 
+@theme {
+  --breakpoint-xs: 26.5625rem;
+}
+
 html {
   scroll-padding-top: calc(var(--ui-header-height) + calc(var(--spacing) * 6));
 }

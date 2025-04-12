@@ -1,6 +1,9 @@
 hero:
   title: Partez l'esprit tranquille, [on s'occupe de tout]{.block}
   description: Imprévu, souci de personnel ou besoin d'une pause ? [Faites confiance à nos services pour garantir la continuité de votre commerce.]{.block}
+  links:
+    pricing: Nos tarifs
+    request: Travaillons ensemble
 intro:
   headline: Nos forces
   title: Un réseau de plus de 150 entreprises et 250 remplaçants qualifiés
@@ -33,22 +36,24 @@ why:
   features:
     - title: Tarification claire
       description: Nos tarifs sont compétitifs, sans frais cachés, et sont indiqués dans la section suivante sans engagement de votre part.
-      icon: heroicons:currency-euro-solid
+      icon: heroicons:document-currency-euro-solid
     - title: Réactivité garantie
       description: Nous mettons tout en œuvre pour accéder à votre demande et vous proposer une solution sous 48 heures.
       icon: heroicons:clock-solid
     - title: Suivi personnalisé
-      description: Un interlocuteur unique qui suit votre dossier de A à Z, disponible pour répondre à vos questions et s'adapter à vos besoins.
-      icon: heroicons:briefcase-solid
+      description: Un interlocuteur unique suit votre dossier de A à Z, toujours disponible pour répondre à vos questions et s'adapter à vos besoins.
+      icon: heroicons:lifebuoy-solid
     - title: Démarches facilitées
       description: |
         Une gestion administrative simplifiée au maximum, un contrat clair et une facturation simple : nous vous accompagnons tout au long du processus.
       icon: heroicons:document-check-solid
-    - title: Une approche moderne
+    - title: Approche moderne
       description: |
         Une prise en charge optimisée et des outils performants qui nous permettent de suivre les disponibilités de chacun : notre méthode de travail assure un traitement efficace de chaque demande, de la prise de contact à la clôture du remplacement.
       icon: heroicons:square-3-stack-3d-solid
 pricing:
+  title: Nos tarifs
+  description: Choisissez l'offre qui correspond à vos besoins.
   one:
     price: 110 €
     fee:
@@ -63,10 +68,10 @@ pricing:
     label: Forfait annuel
     description: |
       Ce forfait permet l'utilisation des services de remplacement sans aucun frais de gestion supplémentaire pendant une durée de 12 mois. Il est rentabilisé dès lors que vous souhaitez effectuer plus de deux demandes par an.
-form:
-  quick:
-    title: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, reiciendis.
-    icon: heroicons:bell-alert-solid
+  button:
+    label: Demander un devis
+request:
+  title: Effectuez votre demande en quelques clics.
 faq:
   title: Questions fréquentes
   description: Trouvez ici les réponses aux questions que vous vous posez sur nos services.

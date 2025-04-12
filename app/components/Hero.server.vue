@@ -1,12 +1,16 @@
 <script setup lang="ts">
-defineProps<{ title: string; description: string }>();
+defineProps<{
+  title: string;
+  description: string;
+  links: { pricing: string; request: string };
+}>();
 </script>
 
 <template>
   <UPageHero
     :links="[
-      { label: 'Nos formules', to: '#formules', variant: 'soft' },
-      { label: 'Rejoignez notre réseau', to: '#devenir-partenaire' },
+      { label: links.pricing, to: '#tarifs', variant: 'soft' },
+      { label: links.request, to: '#demande' },
     ]"
   >
     <template #title>

@@ -9,6 +9,10 @@ export default defineContentConfig({
         hero: z.object({
           title: z.string().nonempty(),
           description: z.string().nonempty(),
+          links: z.object({
+            pricing: z.string().nonempty(),
+            request: z.string().nonempty(),
+          }),
         }),
         intro: z.object({
           headline: z.string().nonempty(),
@@ -52,6 +56,8 @@ export default defineContentConfig({
           ),
         }),
         pricing: z.object({
+          title: z.string().nonempty(),
+          description: z.string().nonempty(),
           one: z.object({
             price: z.string().nonempty(),
             fee: z.object({
@@ -61,7 +67,6 @@ export default defineContentConfig({
           }),
           two: z.object({
             price: z.string().nonempty(),
-            discount: z.string().nonempty(),
             fee: z.object({
               default: z.number().nonnegative(),
               annual: z.number().nonnegative(),
@@ -71,13 +76,9 @@ export default defineContentConfig({
             label: z.string().nonempty(),
             description: z.string().nonempty(),
           }),
+          button: z.object({ label: z.string().nonempty() }),
         }),
-        form: z.object({
-          quick: z.object({
-            title: z.string().nonempty(),
-            icon: z.string().nonempty(),
-          }),
-        }),
+        request: z.object({ title: z.string().nonempty() }),
         faq: z.object({
           title: z.string().nonempty(),
           description: z.string().nonempty(),

@@ -28,9 +28,7 @@ export const FEATURES = [
 ] as const;
 
 export const PARTNERSHIPS = [
-  "Un remplaçant",
-  "Un binôme de remplaçants",
-  "Devenir remplaçant",
+  { label: "Un remplaçant", icon: "heroicons:user-solid" },
+  { label: "Deux remplaçants", icon: "heroicons:users-solid" },
+  { label: "Devenir remplaçant", icon: "heroicons:user-plus-solid" },
 ] as const;
-
-export type Partnership = (typeof PARTNERSHIPS)[number];
