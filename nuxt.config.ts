@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   future: { compatibilityVersion: 4 },
   imports: { dirs: ["schemas"] },
-  modules: ["@nuxt/ui-pro", "@nuxt/content", "@nuxthub/core"],
+  modules: ["@nuxt/ui-pro", "@nuxt/content", "@nuxthub/core", "@nuxt/scripts"],
   content: { preview: { api: "https://api.nuxt.studio" } },
   nitro: { compressPublicAssets: { brotli: true } },
 });

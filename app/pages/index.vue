@@ -52,8 +52,8 @@ const { data } = await useAsyncData(() => queryCollection("content").first());
         :title="data.why.title"
         :features="data.why.features"
       />
-      <LazyPricing hydrate-on-visible v-bind="data.pricing" />
-      <LazyPartnership hydrate-on-interaction />
+      <LazyPricing hydrate-on-idle v-bind="data.pricing" />
+      <LazyPartnership hydrate-on-visible />
       <LazyFaq hydrate-on-interaction v-bind="data.faq" />
     </NuxtLayout>
   </template>

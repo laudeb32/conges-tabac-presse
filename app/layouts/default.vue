@@ -1,44 +1,89 @@
 <script setup lang="ts">
-function navigationItems(type: "header" | "footer" = "header") {
-  return [
-    {
-      label: "Témoignages",
-      to: "#temoignages",
-      icon: "heroicons:chat-bubble-left-right-solid",
-    },
-    {
-      label: "Avantages",
-      to: "#avantages",
-      icon: "heroicons:sparkles-solid",
-    },
-    {
-      label: "Formules",
-      to: "#formules",
-      icon: "heroicons:puzzle-piece-solid",
-    },
-    ...(type === "header"
-      ? [
-          {
-            label: "Me contacter",
-            to: "#",
-            icon: "heroicons:chat-bubble-oval-left-ellipsis-solid",
-          },
-        ]
-      : []),
-  ];
-}
+const crispTrigger = useTemplateRef("crisp-trigger");
+
+const navigation = [
+  {
+    label: "Témoignages",
+    to: "#temoignages",
+    icon: "heroicons:chat-bubble-left-right-solid",
+  },
+  {
+    label: "Nos avantages",
+    to: "#avantages",
+    icon: "heroicons:sparkles-solid",
+  },
+  {
+    label: "Nos formules",
+    to: "#formules",
+    icon: "heroicons:puzzle-piece-solid",
+  },
+];
+
+const { isAvailable } = useAvailability();
 </script>
 
 <template>
   <div>
-    <UHeader title="Congés Tabac Presse">
-      <UNavigationMenu :items="navigationItems()" />
+    <UHeader
+      mode="drawer"
+      title="Congés Tabac Presse"
+      :ui="{
+        body: 'flex flex-col gap-y-4 py-6',
+        right: 'lg:gap-x-6',
+      }"
+    >
+      <UNavigationMenu :items="navigation" />
       <template #body>
-        <UNavigationMenu :items="navigationItems()" />
+        <UNavigationMenu
+          :items="navigation"
+          orientation="vertical"
+          variant="link"
+          :ui="{ list: 'flex flex-col items-center', link: 'px-0' }"
+        />
+        <div class="flex justify-center items-center gap-x-2">
+          <UButton to="#devenir-partenaire" label="Devenir partenaire" />
+          <LazyUTooltip
+            :text="
+              isAvailable
+                ? 'Disponible maintenant pour échanger !'
+                : 'Actuellement indisponible. Votre message sera traité dès que possible.'
+            "
+            :delay-duration="0"
+          >
+            <UChip :color="isAvailable ? 'success' : 'warning'">
+              <UButton
+                icon="heroicons:chat-bubble-oval-left-ellipsis-solid"
+                variant="soft"
+              />
+            </UChip>
+          </LazyUTooltip>
+        </div>
       </template>
       <template #right>
+        <div class="flex items-center gap-x-2">
+          <UButton
+            to="#devenir-partenaire"
+            label="Devenir partenaire"
+            class="max-lg:hidden"
+          />
+          <LazyUTooltip
+            :text="
+              isAvailable
+                ? 'Disponible maintenant pour échanger !'
+                : 'Actuellement indisponible. Votre message sera traité dès que possible.'
+            "
+            :delay-duration="0"
+            class="max-lg:hidden"
+          >
+            <UChip :color="isAvailable ? 'success' : 'warning'">
+              <UButton
+                icon="heroicons:chat-bubble-oval-left-ellipsis-solid"
+                variant="soft"
+              />
+            </UChip>
+          </LazyUTooltip>
+        </div>
         <UColorModeButton />
-        <UButton to="#devenir-partenaire" label="Devenir partenaire" />
       </template>
     </UHeader>
     <UContainer>
@@ -48,9 +93,9 @@ function navigationItems(type: "header" | "footer" = "header") {
     <UFooter id="footer">
       <template #top>
         <UContainer>
-          <div class="flex justify-between items-start">
+          <div class="flex flex-wrap justify-between items-start">
             <UNavigationMenu
-              :items="navigationItems('footer')"
+              :items="navigation"
               orientation="vertical"
               variant="link"
             />
@@ -95,5 +140,14 @@ function navigationItems(type: "header" | "footer" = "header") {
         />
       </template>
     </UFooter>
+    <ScriptCrisp id="">
+      <template #awaitingLoad>
+        <!-- TODO -->
+        <div ref="crisp-trigger"></div>
+      </template>
+      <template #loading>
+        <!-- TODO -->
+      </template>
+    </ScriptCrisp>
   </div>
 </template>

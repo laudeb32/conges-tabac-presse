@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import * as v from "valibot";
-
 const steps = ref([
   {
     slot: "infos",
