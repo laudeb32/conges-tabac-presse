@@ -10,24 +10,7 @@ const partnership = ref<Partnership>();
 <template>
   <template v-if="data">
     <NuxtLayout name="default">
-      <UPageHero
-        :title="data.hero.title"
-        :links="[
-          { label: 'Nos formules', to: '#formules', variant: 'soft' },
-          { label: 'Rejoignez notre réseau', to: '#devenir-partenaire' },
-        ]"
-      >
-        <template #title>
-          <MDC :value="data.hero.title" :tag="false" unwrap="p" />
-        </template>
-        <template #description>
-          <MDC
-            :value="data.hero.description"
-            tag="p"
-            unwrap="p"
-          />
-        </template>
-      </UPageHero>
+      <Hero :title="data.hero.title" :description="data.hero.description" />
       <UPageSection
         :headline="data.intro.headline"
         :title="data.intro.title"
