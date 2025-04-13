@@ -14,14 +14,14 @@ defineProps<{ state: any }>();
       <UInput
         v-model="state.Téléphone"
         type="tel"
-        trailing-icon="i-heroicons-phone"
+        trailing-icon="heroicons:phone"
       />
     </UFormField>
     <UFormField label="Email" name="Email" required>
       <UInput
         v-model="state.Email"
         type="email"
-        trailing-icon="i-heroicons-at-symbol"
+        trailing-icon="heroicons:at-symbol"
       />
     </UFormField>
   </UForm>

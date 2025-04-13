@@ -33,7 +33,6 @@ const annualFee = ref(false);
           label: 'Deux remplaçants',
           price: two.price,
           fee: annualFee ? two.fee.annual : two.fee.default,
-          ...(annualFee && { badge: 'Meilleure offre' }),
         },
       ]"
       v-bind="
@@ -46,7 +45,6 @@ const annualFee = ref(false);
     >
       <template #content="{ item }">
         <UPricingPlan
-          :badge="item.badge"
           :title="item.label"
           description="À partir de"
           :price="item.price"

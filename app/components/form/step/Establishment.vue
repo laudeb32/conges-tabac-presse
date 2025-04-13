@@ -20,13 +20,9 @@ const props = defineProps<{ state: any }>();
     <UFormField label="Adresse" name="Adresse" required>
       <UInput v-model="state.Adresse" />
     </UFormField>
-    <UFormField
-      label="Caractéristiques de l'établissement"
-      name="Caractéristiques de l'établissement"
-      required
-    >
+    <UFormField label="Caractéristiques" name="Caractéristiques" required>
       <UInputMenu
-        v-model="state['Caractéristiques de l\'établissement']"
+        v-model="state['Caractéristiques']"
         multiple
         :items="[...FEATURES]"
       />
@@ -39,13 +35,13 @@ const props = defineProps<{ state: any }>();
       <UInput v-model="state['Numéro de SIRET']" />
     </UFormField>
     <UFormField
-      label="Nombre de clients par jour"
-      name="Nombre de clients par jour"
-      hint="En moyenne"
+      label="Nombre de clients"
+      name="Nombre de clients"
+      hint="En moyenne/jour"
       help="±50 près"
       required
     >
-      <UInputNumber v-model="state['Nombre de clients par jour']" :min="0" :step="50" />
+      <UInputNumber v-model="state['Nombre de clients']" :min="0" :step="50" />
     </UFormField>
   </UForm>
 </template>

@@ -1,19 +1,21 @@
 <script setup lang="ts">
+const { partnership } = defineProps<{ partnership?: Partnership }>();
+
 const steps = ref([
   {
-    slot: "infos",
+    slot: "info",
     title: "Informations personnelles",
-    icon: "i-heroicons-clipboard-document-list",
+    icon: "heroicons:clipboard-document-list",
   },
   {
     slot: "establishment",
     title: "Détails de l'établissement",
-    icon: "i-heroicons-building-storefront",
+    icon: "heroicons:building-storefront",
   },
   {
     slot: "mission",
     title: "Détails de la mission",
-    icon: "i-heroicons-calendar-days",
+    icon: "heroicons:calendar-days",
   },
 ]);
 
@@ -26,13 +28,13 @@ const state = reactive<Partial<Form>>({
   "Code postal": "",
   Ville: "",
   Adresse: "",
-  "Caractéristiques de l'établissement": [],
-  "Nombre de clients par jour": 0,
-  "Période de remplacement": undefined,
+  Caractéristiques: [],
+  "Nombre de clients": 0,
+  Période: undefined,
   "Jours travaillés": [],
-  "Nombre d'heures par semaine": 0,
-  "Autres employés présents": 0,
-  "Hébergement sur place": undefined,
+  "Heures travaillées": 0,
+  "Employés présents": 0,
+  Hébergement: undefined,
   "Autres informations": "",
 });
 
@@ -47,20 +49,23 @@ function nextStep() {
   currentStep.value++;
 }
 
-function submit(event: SubmitEvent) {
-  console.log(event);
+async function submit() {
+  await $fetch("/api/gerants", {
+    method: "POST",
+    body: { Demande: partnership, ...state },
+  });
 }
 </script>
 
 <template>
-  <UForm :state @submit="(e) => (isLastStep ? submit(e) : nextStep())">
+  <UForm :state @submit="isLastStep ? submit() : nextStep()">
     <UStepper
       v-model="currentStep"
       :items="steps"
       disabled
       :ui="{ title: 'max-xs:hidden' }"
     >
-      <template #infos>
+      <template #info>
         <FormStepInfos :state />
       </template>
       <template #establishment>

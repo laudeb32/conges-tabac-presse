@@ -1,3 +1,11 @@
+<script setup lang="ts">
+const activeTab = ref("0");
+
+const partnership = computed(
+  () => PARTNERSHIPS[Number(activeTab.value)]?.label
+);
+</script>
+
 <template>
   <UPageSection
     id="demande"
@@ -5,6 +13,7 @@
     title="Effectuez votre demande en quelques clics"
   >
     <UTabs
+      v-model="activeTab"
       :items="[...PARTNERSHIPS]"
       v-bind="
         $viewport.isLessThan('tablet') && {
@@ -16,7 +25,7 @@
     >
       <template #content="{ item }">
         <FormQuick v-if="item.label === 'Devenir remplaçant'" />
-        <FormFull v-else />
+        <FormFull v-else :partnership />
       </template>
     </UTabs>
   </UPageSection>

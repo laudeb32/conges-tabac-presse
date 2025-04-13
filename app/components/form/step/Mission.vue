@@ -1,15 +1,17 @@
 <script setup lang="ts">
+import { today } from "@internationalized/date";
+
 defineProps<{ state: any }>();
 </script>
 
 <template>
   <UForm :schema="missionSchema" :state>
-    <UFormField
-      label="Période de remplacement"
-      name="Période de remplacement"
-      required
-    >
-      <UCalendar v-model="state['Période de remplacement']" range />
+    <UFormField label="Période" name="Période" required>
+      <UCalendar
+        v-model="state['Période']"
+        range
+        :is-date-disabled="(date) => date.compare(today('Europe/Paris')) < 0"
+      />
     </UFormField>
     <UFormField label="Jours travaillés" name="Jours travaillés" required>
       <UInputMenu
@@ -19,28 +21,18 @@ defineProps<{ state: any }>();
       />
     </UFormField>
     <UFormField
-      label="Nombre d'heures par semaine"
-      name="Nombre d'heures par semaine"
+      label="Heures travaillées"
+      name="Heures travaillées"
+      hint="Par semaine"
       required
     >
-      <UInputNumber v-model="state['Nombre d\'heures par semaine']" :min="0" />
+      <UInputNumber v-model="state['Heures travaillées']" :min="0" />
     </UFormField>
-    <UFormField
-      label="Autres employés présents"
-      name="Autres employés présents"
-      required
-    >
-      <UInputNumber v-model="state['Autres employés présents']" :min="0" />
+    <UFormField label="Employés présents" name="Employés présents" required>
+      <UInputNumber v-model="state['Employés présents']" :min="0" />
     </UFormField>
-    <UFormField
-      label="Hébergement sur place"
-      name="Hébergement sur place"
-      required
-    >
-      <UInputMenu
-        v-model="state['Hébergement sur place']"
-        :items="[...ACCOMODATIONS]"
-      />
+    <UFormField label="Hébergement" name="Hébergement" required>
+      <UInputMenu v-model="state['Hébergement']" :items="[...ACCOMODATIONS]" />
     </UFormField>
     <UFormField label="Autres informations" name="Autres informations">
       <UTextarea v-model="state['Autres informations']" />
