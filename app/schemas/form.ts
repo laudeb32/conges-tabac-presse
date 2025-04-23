@@ -22,7 +22,7 @@ export const establishmentSchema = v.object({
   Adresse: v.pipe(v.string(), v.nonEmpty("L'adresse est requise")),
   Caractéristiques: v.pipe(
     v.array(v.union(FEATURES.map((feature) => v.literal(feature)))),
-    v.minLength(1, "Veuillez sélectionner au moins une caractéristique")
+    v.nonEmpty("Veuillez sélectionner au moins une caractéristique")
   ),
   "Numéro de SIRET": v.optional(
     v.pipe(
@@ -52,14 +52,12 @@ export const missionSchema = v.object({
   ),
   "Jours travaillés": v.pipe(
     v.array(v.union(DAYS.map((day) => v.literal(day)))),
-    v.minLength(1, "Au moins un jour est requis")
+    v.nonEmpty("Au moins un jour est requis")
   ),
-  "Heures travaillées": v.pipe(
-    v.number(),
-    v.minValue(
-      1,
-      "Le nombre d'heures travaillées par semaine doit être supérieur à 0"
-    )
+  "Périodes de travail": v.record(
+    v.union(DAYS.map((day) => v.literal(day))),
+    v.array(v.object({ début: v.string(), fin: v.string() })),
+    "Vous devez définir les périodes de travail pour chaque jour"
   ),
   "Employés présents": v.number(),
   Hébergement: v.pipe(
@@ -74,10 +72,20 @@ export const missionSchema = v.object({
 
 export type MissionForm = v.InferOutput<typeof missionSchema>;
 
-export const formSchema = v.object({
+export const quickFormSchema = v.object({
+  ...infoSchema.entries,
+  Compétences: v.pipe(
+    v.array(v.union(FEATURES.map((feature) => v.literal(feature)))),
+    v.nonEmpty("Veuillez sélectionner au moins une compétence")
+  ),
+});
+
+export type QuickForm = v.InferOutput<typeof quickFormSchema>;
+
+export const fullFormSchema = v.object({
   ...infoSchema.entries,
   ...establishmentSchema.entries,
   ...missionSchema.entries,
 });
 
-export type Form = v.InferOutput<typeof formSchema>;
+export type FullForm = v.InferOutput<typeof fullFormSchema>;

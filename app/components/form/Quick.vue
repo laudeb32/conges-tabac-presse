@@ -1,15 +1,31 @@
 <script setup lang="ts">
-const state = reactive<InfoForm>({
+const state = reactive<QuickForm>({
   Prénom: "",
   Nom: "",
   Téléphone: "",
   Email: "",
+  Compétences: [],
 });
+
+function submit() {
+  console.log(state);
+}
+
+const open = ref(false);
 </script>
 
 <template>
-  <UForm :state>
+  <UForm :schema="quickFormSchema" :state @submit="submit">
     <FormStepInfos :state />
+    <UFormField label="Compétences" name="Compétences" required>
+      <UInputMenu
+        v-model="state['Compétences']"
+        v-model:open="open"
+        multiple
+        :items="[...FEATURES]"
+        @click="open = true"
+      />
+    </UFormField>
     <UAlert
       title="Il vous sera demandé un extrait de casier judiciaire."
       color="info"
@@ -27,6 +43,6 @@ const state = reactive<InfoForm>({
         </p>
       </template>
     </UAlert>
-    <UButton label="Envoyer" />
+    <UButton type="submit" label="Envoyer" />
   </UForm>
 </template>

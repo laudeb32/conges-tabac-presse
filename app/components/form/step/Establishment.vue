@@ -1,5 +1,7 @@
 <script setup lang="ts">
-const props = defineProps<{ state: any }>();
+defineProps<{ state: any }>();
+
+const open = ref(false);
 </script>
 
 <template>
@@ -23,8 +25,10 @@ const props = defineProps<{ state: any }>();
     <UFormField label="Caractéristiques" name="Caractéristiques" required>
       <UInputMenu
         v-model="state['Caractéristiques']"
+        v-model:open="open"
         multiple
         :items="[...FEATURES]"
+        @click="open = true"
       />
     </UFormField>
     <UFormField

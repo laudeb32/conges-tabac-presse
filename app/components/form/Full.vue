@@ -19,7 +19,7 @@ const steps = ref([
   },
 ]);
 
-const state = reactive<Partial<Form>>({
+const state = reactive<Partial<FullForm>>({
   Prénom: "",
   Nom: "",
   Téléphone: "",
@@ -32,7 +32,7 @@ const state = reactive<Partial<Form>>({
   "Nombre de clients": 0,
   Période: undefined,
   "Jours travaillés": [],
-  "Heures travaillées": 0,
+  "Périodes de travail": {},
   "Employés présents": 0,
   Hébergement: undefined,
   "Autres informations": "",
